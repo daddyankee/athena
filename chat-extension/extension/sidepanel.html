@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athena</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header>
+    <button id="menu-btn" title="Chat history">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      </svg>
+    </button>
+    <div class="logo">
+      <span class="logo-mark">A</span>
+      <span class="logo-name">Athena</span>
+    </div>
+    <button id="clear-btn" title="New chat">&#x2715;</button>
+  </header>
+
+  <!-- History overlay -->
+  <div id="history-panel" class="hidden">
+    <div class="history-top">
+      <button id="new-chat-btn">+ New chat</button>
+    </div>
+    <div id="history-list"></div>
+    <button id="show-more-btn" class="hidden">Show more</button>
+  </div>
+
+  <!-- Main chat -->
+  <div id="chat-view">
+    <div id="toggles">
+      <button class="toggle active" data-key="mock">Mock</button>
+      <button class="toggle" data-key="humanize">Humanize</button>
+      <button class="toggle" data-key="developer">Developer</button>
+    </div>
+
+    <div id="messages"></div>
+
+    <div id="input-area">
+      <textarea id="input" placeholder="Ask anything..." rows="1"></textarea>
+      <button id="send-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
